@@ -1,0 +1,1068 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f7fb;
+  color: #171717;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f8fc;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e9e9ee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #222;
+}
+
+.logo span {
+  color: #222;
+}
+
+.logo strong {
+  color: #635bff;
+}
+
+.logoMark {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #635bff;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.logoIcon {
+  font-size: 23px;
+  margin-right: 7px;
+}
+
+.logo span {
+  color: #222;
+}
+
+.logo strong {
+  color: #635bff;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  color: #666;
+  font-size: 14px;
+}
+
+.navLinks span {
+  cursor: pointer;
+}
+
+.navLinks .active {
+  color: #635bff;
+  font-weight: 600;
+}
+
+.loginBtn {
+  padding: 10px 18px;
+  border: 1px solid #dedee7;
+  background: white;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.loginBtn:hover {
+  border-color: #635bff;
+  color: #635bff;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  padding: 90px 20px 80px;
+  background: #f7f8fc;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Soft background circles */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.glowOne {
+  width: 400px;
+  height: 400px;
+  left: -230px;
+  top: 80px;
+  background: #eeecff;
+  filter: blur(10px);
+}
+
+.glowTwo {
+  width: 350px;
+  height: 350px;
+  right: -200px;
+  top: 200px;
+  background: #f0edff;
+  filter: blur(10px);
+}
+
+/* ================= BADGE ================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #eeecff;
+  color: #635bff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badge span {
+  font-size: 13px;
+}
+
+/* ================= HEADING ================= */
+
+.hero h1 {
+  max-width: 850px;
+  margin: 25px auto 18px;
+  font-size: 64px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  font-weight: 750;
+  color: #171717;
+}
+
+.hero h1 span {
+  color: #635bff;
+}
+
+.heroText {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #707070;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ================= SEARCH BOX ================= */
+
+.searchCard {
+  width: 100%;
+  max-width: 1050px;
+  margin: 42px auto 0;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e3e3e8;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 8px 25px rgba(20, 20, 40, 0.07);
+  text-align: left;
+}
+
+.locationBox {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+}
+
+.locationIcon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  font-size: 10px;
+}
+
+.pickup {
+  background: #eeecff;
+  color: #635bff;
+}
+
+.destination {
+  background: #f1f1f4;
+  color: #555;
+}
+
+.locationBox label {
+  display: block;
+  margin-bottom: 5px;
+  color: #999;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.locationBox input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #222;
+  font-size: 14px;
+}
+
+.locationBox input::placeholder {
+  color: #999;
+}
+
+.routeLine {
+  width: 1px;
+  height: 42px;
+  background: #e4e4e8;
+  flex-shrink: 0;
+}
+
+/* SEARCH BUTTON */
+
+.searchBtn {
+  height: 50px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 9px;
+  background: #635bff;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.searchBtn:hover {
+  background: #5148e8;
+}
+
+.searchBtn:active {
+  transform: scale(0.98);
+}
+
+.searchBtn .arrow {
+  margin-left: 9px;
+  font-size: 16px;
+}
+
+.searchBtn:hover {
+  background: #5148e8;
+  transform: translateY(-1px);
+}
+
+.searchBtn:active {
+  transform: translateY(0);
+}
+
+.searchBtn span {
+  margin-left: 7px;
+}
+
+/* ================= TRUSTED ================= */
+
+.trusted {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  color: #999;
+  font-size: 12px;
+}
+
+.trusted b {
+  color: #666;
+  font-weight: 600;
+}
+
+/* ================= FLOATING CARDS ================= */
+
+.floatingCard {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: white;
+  border: 1px solid #e4e4e8;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(20, 20, 40, 0.07);
+  text-align: left;
+}
+
+.floatingCard small {
+  display: block;
+  margin-bottom: 3px;
+  color: #999;
+  font-size: 9px;
+}
+
+.floatingCard strong {
+  font-size: 16px;
+}
+
+.miniIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #eeecff;
+}
+
+.miniIcon.green {
+  background: #edf8f0;
+}
+
+.cardLeft {
+  left: 5%;
+  top: 420px;
+}
+
+.cardRight {
+  right: 5%;
+  top: 240px;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 10px 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature {
+  padding: 23px;
+  background: white;
+  border: 1px solid #e7e7ec;
+  border-radius: 13px;
+}
+
+.feature > div {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  background: #f0efff;
+  border-radius: 9px;
+  font-size: 18px;
+}
+
+.feature h3 {
+  margin-bottom: 7px;
+  font-size: 16px;
+}
+
+.feature p {
+  color: #777;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ================= RESULTS ================= */
+
+.results {
+  width: 100%;
+  padding: 70px 7%;
+  background: #f7f7fa;
+  color: #171717;
+  border-top: 1px solid #ededf1;
+}
+
+.resultsHeader {
+  max-width: 1100px;
+  margin: 0 auto 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.resultTag {
+  color: #635bff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.resultsHeader h2 {
+  margin: 7px 0 5px;
+  font-size: 30px;
+}
+
+.resultsHeader p {
+  color: #777;
+  font-size: 13px;
+}
+
+.sortBox {
+  padding: 9px 13px;
+  border: 1px solid #dddde4;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.sortBox span {
+  color: #999;
+}
+
+.sortBox strong {
+  font-weight: 600;
+}
+
+/* ================= RIDE CARDS ================= */
+
+.rideGrid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.rideCard {
+  position: relative;
+  padding: 22px;
+  background: white;
+  border: 1px solid #e4e4e9;
+  border-radius: 13px;
+  box-shadow: 0 5px 18px rgba(20, 20, 40, 0.04);
+  transition: 0.2s;
+}
+
+.rideCard:hover {
+  border-color: #c9c5ff;
+  box-shadow: 0 10px 25px rgba(20, 20, 40, 0.07);
+}
+
+.rideCard.cheapest {
+  border: 1.5px solid #635bff;
+}
+
+.cheapestBadge {
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  padding: 5px 9px;
+  background: #635bff;
+  color: white;
+  border-radius: 12px;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.rideTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.provider {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.providerIcon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f3f7;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.provider h3 {
+  font-size: 16px;
+}
+
+.provider p {
+  margin-top: 4px;
+  color: #888;
+  font-size: 11px;
+}
+
+.rating {
+  color: #e09b00;
+  font-size: 11px;
+}
+
+.rideInfo {
+  margin: 22px 0;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rideInfo span {
+  display: block;
+  margin-bottom: 5px;
+  color: #999;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.rideInfo strong {
+  font-size: 20px;
+}
+
+.rideBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.saveText {
+  color: #888;
+  font-size: 9px;
+}
+
+.rideBottom button {
+  min-width: 95px;
+  padding: 10px 14px;
+  border: 1px solid #635bff;
+  border-radius: 7px;
+  background: #635bff;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.rideBottom button:hover {
+  background: #5148e8;
+}
+
+.rideBottom button span {
+  margin-left: 7px;
+}
+
+.demoNote {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  text-align: center;
+  color: #999;
+  font-size: 10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  width: 100%;
+  padding: 22px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-top: 1px solid #e8e8ed;
+  color: #888;
+  font-size: 11px;
+}
+
+footer b {
+  color: #635bff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+
+  .floatingCard {
+    display: none;
+  }
+
+  .searchCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .locationBox {
+    width: 100%;
+  }
+
+  .routeLine {
+    width: 100%;
+    height: 1px;
+  }
+
+  .searchBtn {
+    width: 100%;
+  }
+
+  .rideGrid,
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .loginBtn {
+    display: none;
+  }
+
+  .hero {
+    padding: 65px 15px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+    letter-spacing: -1px;
+  }
+
+  .heroText {
+    font-size: 15px;
+  }
+
+  .trusted {
+    flex-wrap: wrap;
+  }
+
+  .results {
+    padding: 55px 15px;
+  }
+
+  .resultsHeader {
+    display: block;
+  }
+
+  .sortBox {
+    margin-top: 15px;
+    width: fit-content;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+/* BOOKING SUMMARY */
+
+.bookingSummary {
+  width: 100%;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-top: 1px solid #e8e8ed;
+}
+
+.bookingCard {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e2e2e8;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(20, 20, 40, 0.06);
+}
+
+.bookingHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.bookingHeader h2 {
+  margin-top: 7px;
+  font-size: 26px;
+}
+
+.closeBooking {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dddde4;
+  background: white;
+  border-radius: 7px;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+}
+
+.closeBooking:hover {
+  border-color: #635bff;
+  color: #635bff;
+}
+
+.bookingRoute {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #f7f7fa;
+  border-radius: 10px;
+}
+
+.bookingLocation {
+  flex: 1;
+}
+
+.bookingLocation span,
+.bookingPrice span {
+  display: block;
+  margin-bottom: 6px;
+  color: #999;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.bookingLocation strong {
+  font-size: 14px;
+  color: #222;
+}
+
+.bookingArrow {
+  color: #635bff;
+  font-size: 20px;
+}
+
+.bookingRide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid #eeeeF2;
+}
+
+.bookingPrice {
+  text-align: right;
+}
+
+.bookingPrice strong {
+  font-size: 24px;
+}
+
+.continueBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #635bff;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.continueBtn:hover {
+  background: #5148e8;
+}
+
+.continueBtn span {
+  margin-left: 8px;
+}
+
+/* BOOKING CONFIRMATION */
+
+.bookingConfirmation {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f7f8fc;
+  border-top: 1px solid #e8e8ed;
+}
+
+.confirmationCard {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px;
+  background: white;
+  border: 1px solid #e2e2e8;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(20, 20, 40, 0.06);
+}
+
+.confirmationIcon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf8f0;
+  color: #27864a;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.confirmationCard h2 {
+  margin: 8px 0 10px;
+  font-size: 28px;
+}
+
+.confirmationCard > p {
+  max-width: 470px;
+  margin: 0 auto;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.confirmationDetails {
+  margin-top: 28px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  background: #f7f7fa;
+  border-radius: 10px;
+}
+
+.confirmationDetails span {
+  display: block;
+  margin-bottom: 6px;
+  color: #999;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.confirmationDetails strong {
+  font-size: 15px;
+}
+
+.backToRidesBtn {
+  margin-top: 22px;
+  padding: 11px 18px;
+  border: 1px solid #dcdce4;
+  border-radius: 8px;
+  background: white;
+  color: #444;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.backToRidesBtn:hover {
+  border-color: #635bff;
+  color: #635bff;
+}
+
+@media (max-width: 600px) {
+  .confirmationCard {
+    padding: 28px 20px;
+  }
+
+  .confirmationDetails {
+    grid-template-columns: 1fr;
+  }
+}
+/* HOW IT WORKS */
+
+.howItWorks {
+  width: 100%;
+  padding: 90px 20px;
+  background: white;
+  border-top: 1px solid #e8e8ed;
+}
+
+.sectionHeading {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.sectionHeading h2 {
+  margin: 9px 0 12px;
+  font-size: 32px;
+  color: #171717;
+}
+
+.sectionHeading p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.steps {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.step {
+  padding: 28px;
+  border: 1px solid #e5e5ea;
+  border-radius: 13px;
+  background: #fafafd;
+}
+
+.stepNumber {
+  margin-bottom: 20px;
+  color: #635bff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.step h3 {
+  margin-bottom: 9px;
+  font-size: 17px;
+}
+
+.step p {
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* ABOUT */
+
+.aboutSection {
+  width: 100%;
+  padding: 90px 20px;
+  background: #f7f8fc;
+  border-top: 1px solid #e8e8ed;
+}
+
+.aboutContent {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.aboutContent h2 {
+  max-width: 450px;
+  margin-top: 10px;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.aboutText {
+  color: #707070;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.aboutText p + p {
+  margin-top: 18px;
+}
+
+
+/* NAVBAR CLICK */
+
+.navLinks span {
+  cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 27px;
+  }
+
+  .aboutContent h2 {
+    font-size: 29px;
+  }
+
+}
