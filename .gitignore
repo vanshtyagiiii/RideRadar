@@ -1,0 +1,11 @@
+# Environment / secrets
+.env
+*.env
+
+# Spring Boot local configuration
+backend/src/main/resources/application-local.properties
+
+# Build files
+backend/target/
+frontend/node_modules/
+frontend/dist/
