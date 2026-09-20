@@ -58,7 +58,9 @@ public class Ride {
     public int getPrice() {
         return price;
     }
-
+     public void setPrice(int price) {
+    this.price = price;
+}
     public String getTime() {
         return time;
     }
