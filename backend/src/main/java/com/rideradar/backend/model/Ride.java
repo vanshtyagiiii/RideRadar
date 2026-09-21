@@ -20,6 +20,7 @@ public class Ride {
     private String time;
     private double rating;
     private String letter;
+    private double distance;
 
     // JPA ke liye default constructor
     public Ride() {
@@ -65,10 +66,20 @@ public class Ride {
         return time;
     }
 
+    public void setTime(String time) {
+    this.time = time;
+}
+
     public double getRating() {
         return rating;
     }
+public double getDistance() {
+    return distance;
+}
 
+public void setDistance(double distance) {
+    this.distance = distance;
+}
     public String getLetter() {
         return letter;
     }

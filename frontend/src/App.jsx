@@ -535,34 +535,39 @@ function App() {
                       </div>
 
 
-                      <div className="rideInfo">
+         <div className="rideInfo">
 
-                        <div>
+  <div>
+    <span>
+      ESTIMATED FARE
+    </span>
 
-                          <span>
-                            ESTIMATED FARE
-                          </span>
+    <strong>
+      ₹{ride.price}
+    </strong>
+  </div>
 
-                          <strong>
-                            ₹{ride.price}
-                          </strong>
+  <div>
+    <span>
+      TRAVEL TIME
+    </span>
 
-                        </div>
+    <strong>
+      {ride.time}
+    </strong>
+  </div>
 
+  <div>
+    <span>
+      DISTANCE
+    </span>
 
-                        <div>
+    <strong>
+      {ride.distance} km
+    </strong>
+  </div>
 
-                          <span>
-                            TRAVEL TIME
-                          </span>
-
-                          <strong>
-                            {ride.time}
-                          </strong>
-
-                        </div>
-
-                      </div>
+</div>
 
 
                       <div className="rideBottom">

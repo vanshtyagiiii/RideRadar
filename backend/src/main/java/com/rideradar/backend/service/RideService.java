@@ -1,6 +1,7 @@
 package com.rideradar.backend.service;
 
 import com.rideradar.backend.model.Ride;
+import com.rideradar.backend.model.RouteInfo;
 import com.rideradar.backend.repository.RideRepository;
 import org.springframework.stereotype.Service;
 
@@ -29,20 +30,44 @@ public class RideService {
         List<Ride> rides = rideRepository.findAll();
 
         // Demo distance calculation
-        double distance = distanceService.calculateDistance(
-        pickup,
-        destination
-);
+       RouteInfo route =
+        distanceService.calculateRoute(
+                pickup,
+                destination
+        );
+
+double distance = route.getDistance();
+ for (Ride ride : rides) {
+    ride.setDistance(distance);
+}
+
+int duration = route.getDuration();
 
         System.out.println("Estimated distance: " + distance + " km");
 
-        for (Ride ride : rides) {
+     for (Ride ride : rides) {
 
-            int calculatedPrice = calculateFare(
+    ride.setDistance(distance);
+
+    int calculatedPrice =
+            calculateFare(
                     ride.getName(),
                     distance
             );
           ride.setPrice(calculatedPrice);
+
+            int providerDuration = calculateProviderDuration(
+        ride.getName(),
+        duration
+);
+
+ride.setTime(providerDuration + " min");
+System.out.println(
+        ride.getName()
+                + " estimated time: "
+                + providerDuration
+                + " min"
+);
             System.out.println(
                     ride.getName()
                             + " estimated fare: ₹"
@@ -83,4 +108,22 @@ public class RideService {
                 baseFare + (distance * perKm)
         );
     }
+     private int calculateProviderDuration(
+        String provider,
+        int baseDuration
+) {
+
+    if (provider.equalsIgnoreCase("Uber")) {
+
+        return baseDuration;
+
+    } else if (provider.equalsIgnoreCase("Ola")) {
+
+        return baseDuration + 1;
+
+    } else {
+
+        return Math.max(1, baseDuration - 1);
+    }
+}
 }
